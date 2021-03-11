@@ -1,5 +1,5 @@
-# lab_inventory_sharing_system
-A JavaFx application.
+# Lab Inventory Management system 
+This project is designed to manage and share lab resources for college researchers to utilize the system to look up inventories and manage resource information.
 
 Description of this system:
 Resource sharing is a common activity among graduate students and laboratories, especially in experimental groups. 
