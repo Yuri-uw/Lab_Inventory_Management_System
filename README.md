@@ -1,18 +1,18 @@
 ### Lab Inventory Management system 
 This project is designed to manage and share lab resources for college researchers to utilize the system to look up inventories and manage resource information.
 
-**Description:**
+### Description:
 Resource sharing is an everyday activity among graduate students and laboratories, especially in experimental groups. In particular, experiments in biology and chemistry require the use of specialized equipment (e.g., chemical containers, pipettes, incubators, microscopes) and reagents that are expensive to purchase and maintain. This system is designed for graduate students to share resources at the early stages of experimental design to prevent unnecessary waste. 
 
 The application includes a login page, an inventory page, an item page and the user information page. Here we only have the source code of the Item page and its child pages.
 
-**Backend table and its attributes:**
+### Backend table and its attributes:
 ***Implemented in Amazon Web Services***
 Inventory(inventoryID, entityID, quantity, expiry, ownerID)
 Items (itemId, itemName, unit, manufacturer)
 Users(user_id, user_name, lab, PI_name, email, phone, crypt_passwd_hash, lab_training)
 
-**How to run this program**
+### How to run this program
 https://www.jetbrains.com/help/idea/javafx.html#add-javafx-lib
 **Before run Main, please got to src -> database -> DatabaseHandler to modift the _DB_URL,USER,PASS_ to the valid information.**
 
