@@ -1,10 +1,6 @@
 package util;
 
-import com.sun.javafx.stage.EmbeddedWindow;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.DialogPane;
-import javafx.scene.layout.StackPane;
 
 /**
  * @Description: The AlertInfo is used to show a alert dialog
@@ -38,11 +34,6 @@ public class AlertInfo {
         alert.setTitle("Error");
         alert.setHeaderText(title);
         alert.setContentText(content);
-
-
-
-
-
         alert.showAndWait();
 
     }
