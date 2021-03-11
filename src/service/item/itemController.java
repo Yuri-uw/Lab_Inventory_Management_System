@@ -1,3 +1,8 @@
+/**
+ * @Author: Li Liao
+ * @Date: 03/04/2021
+ */
+
 package service.item;
 
 import database.DatabaseHandler;
@@ -14,27 +19,19 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.stage.StageStyle;
-import model.Item;
-import util.AlertInfo;
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-/**
- * @Description: Item page Controller
- * @Author: Li Liao
- * @Date: 03/04/2021
- */
+import model.Item;
+import util.AlertInfo;
 
 public class itemController implements Initializable {
 
     private ObservableList<Item> observableList = FXCollections.observableArrayList();
-    // private final static Logger logger = Logger.getLogger(itemController.class.getName());
-
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initColumn();
@@ -54,6 +51,9 @@ public class itemController implements Initializable {
     @FXML
     private TableColumn<Item, String> col_status;
 
+    /**
+     * Handle action on delete button, and delete select item from database
+     */
     @FXML
     private void delete() {
         ObservableList<Item> selectedItems = table.getSelectionModel().getSelectedItems();
@@ -66,7 +66,9 @@ public class itemController implements Initializable {
         String query = "DELETE FROM Items WHERE id IN (" + ids.toString() + ");";
         handler.execQuery(query);
     }
-
+    /**
+     * Handle action on edit button,and redirect to another page to update item.
+     */
     @FXML
     private void edit() {
         Item selectedItem = table.getSelectionModel().getSelectedItem();
@@ -84,16 +86,21 @@ public class itemController implements Initializable {
                 refresh(new ActionEvent());
             });
         } catch (IOException exception) {
-            // logger.log(Level.SEVERE, "Exception occur", exception);
             exception.printStackTrace();
         }
     }
-
+    
+    /**
+     * Handle action on refresh button
+     */
     @FXML
     private void refresh(ActionEvent actionEvent) {
         loadData();
     }
-
+    
+    /**
+     * Handle action on add button, and redirect to another page to add item
+     */
     @FXML
     private void add() {
         try {
@@ -107,19 +114,32 @@ public class itemController implements Initializable {
                 refresh(new ActionEvent());
             });
         } catch (IOException exception) {
-            // logger.log(Level.SEVERE, "Exception occur", exception);
             exception.printStackTrace();
         }
     }
 
+    /**
+     * Back to home page
+     */
     @FXML
     private void returnToHomePage(ActionEvent actionEvent) {
         ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
         // loadIndex();
     }
-
+    
     /**
-     * load data into table from database
+     * Initialize column
+     */
+    private void initColumn() {
+        col_item_no.setCellValueFactory(new PropertyValueFactory<>("itemId"));
+        col_name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        col_unit.setCellValueFactory(new PropertyValueFactory<>("unit"));
+        col_manufacturer.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
+        // col_status.setCellValueFactory(new PropertyValueFactory<>("status"));
+    }
+    
+    /**
+     * Load data into table from database
      */
     private void loadData() {
         observableList.clear();
@@ -139,20 +159,7 @@ public class itemController implements Initializable {
         }
         table.setItems(observableList);
     }
-
-    /**
-     * initialize column
-     */
-    private void initColumn() {
-        col_item_no.setCellValueFactory(new PropertyValueFactory<>("itemId"));
-        col_name.setCellValueFactory(new PropertyValueFactory<>("name"));
-        col_unit.setCellValueFactory(new PropertyValueFactory<>("unit"));
-        col_manufacturer.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
-        // col_status.setCellValueFactory(new PropertyValueFactory<>("status"));
-    }
-
-
-    /*
+    
     /**
      * return to home page
     private void loadIndex() {
