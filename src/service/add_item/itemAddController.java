@@ -34,6 +34,7 @@ public class itemAddController implements Initializable {
 
     /**
      * This method is called to end current window and return to Item page
+     *
      * @param event event
      */
     @FXML
@@ -44,6 +45,7 @@ public class itemAddController implements Initializable {
     /**
      * This method is called to add input data, alert for invalidate execution or inform when successful
      * Then clear textfield
+     *
      * @param event event
      */
     @FXML
