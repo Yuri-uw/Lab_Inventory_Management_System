@@ -63,6 +63,7 @@ public final class DatabaseHandler {
     
      /**
      * This method is called to handle SQL statement, and return ResultSet
+     *
      * @param query A SQL statement trigger by action on GUI
      * @return A ResultSet object that contains the data
      */
@@ -80,6 +81,7 @@ public final class DatabaseHandler {
     
     /**
      * This method is called to handle SQL statement, and return a int to trigger Alert dialog
+     *
      * @param query A SQL statement trigger by action on GUI
      * @return The row count for SQL DML statements
      */
@@ -95,6 +97,7 @@ public final class DatabaseHandler {
     
     /**
      * This method is called to handle SQL statement
+     *
      * @param query A SQL statement trigger by action on GUI
      * @return A boolean
      */
