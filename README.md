@@ -17,6 +17,7 @@ The application includes a login page, an inventory page, an item page and the u
 
 ### How to run this program
 https://www.jetbrains.com/help/idea/javafx.html#add-javafx-lib
+###
 **Before run Main, please got to src -> database -> DatabaseHandler to modift the _DB_URL,USER,PASS_ to the valid information.**
 
 **Sample page - Items**
