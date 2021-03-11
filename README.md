@@ -15,12 +15,12 @@ The application includes a login page, an inventory page, an item page and the u
 **Users** (user_id, user_name, lab, PI_name, email, phone, crypt_passwd_hash, lab_training)
 
 
-### How to run this program
+### How to run this program:
 https://www.jetbrains.com/help/idea/javafx.html#add-javafx-lib
 ###
-**Before run Main, please got to src -> database -> DatabaseHandler to modift the _DB_URL,USER,PASS_ to the valid information.**
+**Before run Main, please go to src -> database -> DatabaseHandler to modift the _DB_URL,USER,PASS_ to the valid information.**
 
-**Sample page - Items**
+### Sample page - Items:
 ![image](https://user-images.githubusercontent.com/73818437/110751494-c6ac8680-81f8-11eb-8d23-0b711c4b8cfc.png)
 
 
