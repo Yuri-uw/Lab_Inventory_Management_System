@@ -1,3 +1,9 @@
+/**
+ * @Description: add_item stage controller
+ * @Author: Li Liao
+ * @Date: 03/04/2021
+ */
+
 package service.add_item;
 
 import database.DatabaseHandler;
@@ -5,18 +11,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import util.AlertInfo;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
-/**
- * @Description: add item stage controller
- * @Author: Li Liao
- * @Date: 03/04/2021
- */
 
 public class itemAddController implements Initializable {
     private DatabaseHandler handler;
@@ -34,7 +33,7 @@ public class itemAddController implements Initializable {
     private TextField txtManufacturer;
 
     /**
-     * This method is called to back to Item page
+     * This method is called to end current window and return to Item page
      * @param event event
      */
     @FXML
@@ -43,8 +42,8 @@ public class itemAddController implements Initializable {
     }
 
     /**
-     * This method is called to add input, alert for invalidate execution or inform when successful
-     * Automatically clear text
+     * This method is called to add input data, alert for invalidate execution or inform when successful
+     * Then clear textfield
      * @param event event
      */
     @FXML
