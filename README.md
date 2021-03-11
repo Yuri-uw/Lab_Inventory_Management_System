@@ -13,9 +13,9 @@ Items (itemId, itemName, unit, manufacturer)
 Users(user_id, user_name, lab, PI_name, email, phone, crypt_passwd_hash, lab_training)
 
 ## Frontend program
-## How to run
-** 1. Set JDK 8 **
-Go to File -> Project Structure -> Project, and set the project SDK to 8. You can also set the language level to 8.
+## How to run this program
+https://www.jetbrains.com/help/idea/javafx.html#add-javafx-lib
+## Before run Main, please got to src -> database -> DatabaseHandler to modift the _DB_URL,USER,PASS_ to the valid information.
 
 ### Sample page - Items 
 ![image](https://user-images.githubusercontent.com/73818437/110751494-c6ac8680-81f8-11eb-8d23-0b711c4b8cfc.png)
