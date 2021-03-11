@@ -1,0 +1,22 @@
+/*******************************************************************************
+ *                                                                             *
+ * Style Button                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+/***** BUTTON DISPLAY *********************************************************/
+.button {
+    -fx-pref-width: 78px;
+    -fx-pref-Height: 25px;
+    -fx-background-radius: 14px;
+    -fx-font-family: sans-serif,Georgia;
+    -fx-font-size: 13px;
+    -fx-font-weight: bolder;
+    -fx-background-color: #C3BFE8;
+    -fx-text-fill: #776AA5;
+}
+/***** BUTTON PRESSED *********************************************************/
+.button:pressed {
+    -fx-background-color: #8FE2B8;
+    -fx-text-fill: #48BC82;
+}

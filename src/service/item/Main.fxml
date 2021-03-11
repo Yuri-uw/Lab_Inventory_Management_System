@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.item.itemController">
+
+    <children>
+      <TableView id="table" fx:id="table" layoutX="134.0" layoutY="146.0" prefHeight="358.0" prefWidth="621.0" stylesheets="@../../css/table.css" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="146.0">
+        <columns>
+          <TableColumn fx:id="col_item_no" prefWidth="83.0" text="Item Id" />
+          <TableColumn fx:id="col_name" prefWidth="192.0" text="Name" />
+          <TableColumn fx:id="col_unit" prefWidth="61.0" text="Unit" />
+          <TableColumn fx:id="col_manufacturer" prefWidth="174.0" text="Manufacturer" />
+          <TableColumn fx:id="col_status" prefWidth="88.0" text="Status" />
+        </columns>
+       </TableView>
+
+      <Button fx:id="refresh" layoutX="662.0" layoutY="82.0" mnemonicParsing="false" onAction="#refresh" prefHeight="27.0" prefWidth="78.0" stylesheets="@../../css/button.css" text="Refresh" textFill="#776aa5" />
+      <Button fx:id="add" layoutX="379.0" layoutY="82.0" mnemonicParsing="false" onAction="#add" prefHeight="27.0" prefWidth="63.0" stylesheets="@../../css/button.css" text="Add" textFill="#776aa5">
+         <font>
+            <Font size="12.0" />
+         </font></Button>
+      <Button fx:id="returnToIndex" layoutX="31.0" layoutY="486.0" mnemonicParsing="false" onAction="#returnToHomePage" style="-fx-background-color: transparent; -fx-text-fill: #776aa5; -fx-font-weight: 400; -fx-font-family: sans-serif,Georgia;" text="&gt; Back" textFill="#776aa5" />
+      <Button fx:id="delete" layoutX="568.0" layoutY="82.0" mnemonicParsing="false" onAction="#delete" stylesheets="@../../css/button.css" text="Delete" textFill="#776aa5" />
+      <Button fx:id="edit" layoutX="474.0" layoutY="82.0" mnemonicParsing="false" onAction="#add" prefHeight="27.0" prefWidth="63.0" stylesheets="@../../css/button.css" text="Edit" textFill="#776aa5" />
+
+      <Text fill="#282828" layoutX="31.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: sans-serif,Georgiasans-serif,Georgia; -fx-font-weight: 400;" text="Items">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TextField alignment="CENTER" layoutX="134.0" layoutY="82.0" promptText="Quick Search" style="-fx-background-radius: 12px;" />
+   </children>
+</AnchorPane>

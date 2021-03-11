@@ -1,0 +1,92 @@
+/*******************************************************************************
+ *                                                                             *
+ * Style TableView                                                             *
+ *                                                                             *
+ ******************************************************************************/
+
+/***** ROW CELLS **************************************************************/
+.table-view {
+    -fx-background-color:#EDEDED;
+    -fx-table-header-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+.table-view .table-row-cell {
+  -fx-border-width: 0.1;
+  -fx-border-color: -fx-box-border;
+}
+/***** HEAD *******************************************************************/
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-size: 13px;
+    -fx-text-background-color: #494949;
+    -fx-font-weight:lighter;
+    -fx-font-family: "Arial";
+    -fx-size: 30px;
+}
+/***** COLUMN *****************************************************************/
+.table-view .table-column{
+    -fx-alignment:center;
+}
+/***** INDIVIDUAL CELLS *******************************************************/
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+    -fx-font-size:12px;
+}
+.table-row-cell{
+    -fx-background-color: transparent;
+    -fx-cell-size: 40px;
+}
+/***** FOCUSED VIEW FOR CELL **************************************************/
+.table-row-cell: hover {
+    -fx-text-background-color: #776AA5;
+    -fx-text-weight: bold;
+}
+.table-row-cell: selected {
+    -fx-background-color: #C3BFE8;
+    -fx-text-background-color: #776AA5;
+}
+/***** SCROLL BAR *************************************************************/
+/* The corner of the header section, bottom right corner and the arrows on either
+   side of the scrollbar were removed. */
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color: #C3BFE8;
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color: #C3BFE8;
+}
+
+
+
+
+
+
+
+
+
+
+
